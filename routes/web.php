@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -14,5 +16,31 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('layout');
+    $data = [
+        'comics' => config('comics')
+    ];
+    //dd(config('comics'));
+    return view('home', $data);
+})->name('home');
+
+Route::get('/comics', function () {
+    $comics = config('comics');
+    return view('comics', compact('comics'));
 });
+
+Route::get('/header', function () {
+    $headerItems = [
+        "Characters",
+        "Comics",
+        "Movies",
+        "Tv",
+        "Games",
+        "Collectibles",
+        "Videos",
+        "Fans",
+        "News",
+        "Shop"
+    ];
+    return view('partials.header', compact('headerItems'));
+});
+
