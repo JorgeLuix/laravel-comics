@@ -16,31 +16,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    $data = [
-        'comics' => config('comics')
-    ];
-    //dd(config('comics'));
-    return view('home', $data);
+    $comics = config('comics');
+    $headerItems = config('headerItems');
+    $listDcComics = config('customs.listDcComics');
+    $listDc = config('customs.listDc');
+    $sitesList = config('customs.sitesList');
+    return view('home', compact('comics', 'headerItems', 'listDcComics', 'listDc', 'sitesList'));
+
 })->name('home');
 
-Route::get('/comics', function () {
-    $comics = config('comics');
-    return view('comics', compact('comics'));
-});
+// Route::get('/comics', function () {
+//     $comics = config('comics');
+//     return View::make('home', compact('comics'));
+// });
 
-Route::get('/header', function () {
-    $headerItems = [
-        "Characters",
-        "Comics",
-        "Movies",
-        "Tv",
-        "Games",
-        "Collectibles",
-        "Videos",
-        "Fans",
-        "News",
-        "Shop"
-    ];
-    return view('partials.header', compact('headerItems'));
-});
+
 

@@ -11,19 +11,28 @@
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
     <!-- Styles -->
+
+
+
     @vite('resources/js/app.js')
 
 </head>
 
 <body>
-
+    <header>
     @include('partials.header')
+</header>
 <main>
+    <div class="jumbotron">
+        <img class="w-100" src="{{ Vite::asset('resources/images/jumbotron.jpg ') }} " alt="">
+    </div>
     <div class="container">
         @yield('content')
     </div>
 </main>
+<footer>
     @include('partials.footer')
+</footer>
 
 </body>
 
