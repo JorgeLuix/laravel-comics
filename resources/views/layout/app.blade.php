@@ -29,6 +29,10 @@
     <div class="container">
         @yield('content')
     </div>
+    <div class="bg-primary text-white mt-4">
+        @include('main')
+    </div>
+
 </main>
 <footer>
     @include('partials.footer')

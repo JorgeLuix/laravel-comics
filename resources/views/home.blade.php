@@ -1,7 +1,7 @@
 @extends('layout.app')
 
 @section('content')
-    <div class="text-center container">
+    <div class="container text-center">
         <div class="row">
             @foreach ($comics as $comic)
             <div class="col-12 col-md-6 col-lg-2 mb-4">
@@ -22,7 +22,6 @@
         </div>
         <button class="text-uppercase btn btn-primary">load more</button>
     </div>
-
 @endsection
 
 <style lang="scss">
