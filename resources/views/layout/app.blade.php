@@ -30,7 +30,7 @@
         @yield('content')
     </div>
     <div class="bg-primary text-white mt-4">
-        @include('main')
+        @include('buyComics')
     </div>
 
 </main>
