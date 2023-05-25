@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $comics = config('comics');
-    $headerItems = config('headerItems');
+    $headerItems = config('headerItems.item');
     $listDcComics = config('customs.listDcComics');
     $listDc = config('customs.listDc');
     $sitesList = config('customs.sitesList');

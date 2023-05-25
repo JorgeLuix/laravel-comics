@@ -22,7 +22,7 @@
     <header>
     @include('partials.header')
 </header>
-<main>
+<main class="bg-black">
     <div class="jumbotron">
         <img class="w-100" src="{{ Vite::asset('resources/images/jumbotron.jpg ') }} " alt="">
     </div>

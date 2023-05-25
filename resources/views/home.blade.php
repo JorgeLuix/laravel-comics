@@ -1,32 +1,36 @@
 @extends('layout.app')
 
 @section('content')
-    <div class="card-container">
+    <div class="text-center container">
         <div class="row">
-    @foreach ($comics as $comic)
-        <div class="col-12 col-md-6 col-lg-2 mb-4">
-            <div class="jc-card">
-                <img src="{{$comic['thumb']}}" alt="{{$comic['title']}}" class="">
+            @foreach ($comics as $comic)
+            <div class="col-12 col-md-6 col-lg-2 mb-4">
+                <div class="jc-card">
+                    <img src="{{$comic['thumb']}}" alt="{{$comic['title']}}" class="">
 
-                <div class="cards-body">
-                    <h2 class="card-title">{{$comic['title']}}</h2>
-                    {{-- <p class="card-description">{{$comic['description']}}</p> --}}
-                    <div class="price-play">
-                    <p class="card-text">{{$comic['price']}}</p>
-                     </div>
+                    <div class="cards-body">
+                        <h2 class="card-title">{{$comic['title']}}</h2>
+                        {{-- <p class="card-description">{{$comic['description']}}</p> --}}
+                        <div class="price-play">
+                        <p class="card-text">{{$comic['price']}}</p>
+                        </div>
+                    </div>
                 </div>
             </div>
+
+            @endforeach
         </div>
-    @endforeach
+        <button class="text-uppercase btn btn-primary">load more</button>
     </div>
-</div>
+
 @endsection
 
 <style lang="scss">
-    .card-container {
+    /* .card-container {
   display: flex;
   justify-content: center;
- }
+  text-align: center
+ } */
     .jc-card {
       width: 100%;
       transition: all ease 0.4s;
