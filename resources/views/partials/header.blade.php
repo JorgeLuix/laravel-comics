@@ -1,20 +1,20 @@
 
 
 <header>
-    <div class=" container d-flex align-items-center justify-content-between mb-5 p-3">
-        <div class="">
+    <div class=" container d-flex align-items-center justify-content-between">
+        <div class="p-3">
                 <img src="{{ Vite::asset('resources/images/dc-logo.png') }} " alt="">
         </div>
 
         <div class="d-flex">
-            <ul class=" d-flex mb-2 mb-lg-0">
-                {{-- @foreach ($headerItems as $item)
+            <ul class=" d-flex">
+                @foreach (config('headerItems.headerLinks') as $item)
                     <li class="nav-item px-3 list-unstyled">
                         <a href="#"> {{ $item }} </a>
                     </li>
 
-                    @endforeach --}}
-                <li class="list-unstyled px-3">
+                    @endforeach
+                {{-- <li class="list-unstyled px-3">
                     <a class="nav-link" href="#">Link</a>
                 </li>
                 <li class="list-unstyled px-3">
@@ -28,7 +28,7 @@
                 </li>
                 <li class="list-unstyled px-3">
                     <a class="nav-link disabled">Disabled</a>
-                </li>
+                </li> --}}
             </ul>
         </div>
         <div>

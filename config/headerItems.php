@@ -1,6 +1,7 @@
 <?php
 return [
- [
+
+ 'headerLinks' =>[
         "Characters",
         "Comics",
         "Movies",

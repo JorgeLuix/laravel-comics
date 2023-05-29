@@ -11,5 +11,14 @@ $fa-font-path: "../fonts/webfonts" !default;
 
 
 .bg-footer{
+    background-color: rgb(78, 77, 77);
+}
+.bg-foot {
     background-image: url('../images/footer-bg.jpg');
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
 }

@@ -17,18 +17,17 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $comics = config('comics');
-    $headerItems = config('headerItems.item');
-    $listDcComics = config('customs.listDcComics');
-    $listDc = config('customs.listDc');
-    $sitesList = config('customs.sitesList');
-    return view('home', compact('comics', 'headerItems', 'listDcComics', 'listDc', 'sitesList'));
+
+    return view('home', compact('comics'));
 
 })->name('home');
 
-// Route::get('/comics', function () {
-//     $comics = config('comics');
-//     return View::make('home', compact('comics'));
-// });
+Route::get('/header', function () {
 
+    return view('home');
+});
 
+Route::get('/footer', function () {
+    return view('home');
+});
 

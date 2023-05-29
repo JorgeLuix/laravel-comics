@@ -21,7 +21,7 @@
             font-size: 1rem;
         }
         span a img {
-            width: 40%;
+            width: 30%;
         }
 
     </style>
