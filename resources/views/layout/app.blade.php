@@ -26,7 +26,7 @@
     <div class="jumbotron">
         <img class="w-100" src="{{ Vite::asset('resources/images/jumbotron.jpg ') }} " alt="">
     </div>
-    <div class="container">
+    <div class="container p-5">
         @yield('content')
     </div>
     <div class="bg-primary text-white mt-4">
